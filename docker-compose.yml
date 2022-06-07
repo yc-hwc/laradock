@@ -944,8 +944,18 @@ services:
       depends_on:
         - php-fpm
       networks:
-        - frontend
-        - backend
+        frontend:
+          aliases:
+            - intranet.test.api.yc-client.anestcang.com
+            - intranet.test.api.wms.anestcang.com
+            - intranet.test.api.account.anestcang.com
+            - intranet.test.api.user-center.anestcang.com
+        backend:
+          aliases:
+            - intranet.test.api.yc-client.anestcang.com
+            - intranet.test.api.wms.anestcang.com
+            - intranet.test.api.account.anestcang.com
+            - intranet.test.api.user-center.anestcang.com
 
 ### OpenResty Server #########################################
     openresty:
