@@ -886,7 +886,7 @@ services:
         - "dockerhost:${DOCKER_HOST_IP}"
       networks:
         - backend
-    laravel-horizon-7.3:
+    laravel-horizon7.3:
       build:
         context: ./laravel-horizon
         args:
