@@ -179,6 +179,7 @@ services:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
         - docker-in-docker:/certs/client
         - ./php-worker/supervisord.d/8.1:/etc/supervisord.d
+      command: ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
 #      ports:
@@ -323,6 +324,7 @@ services:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
         - docker-in-docker:/certs/client
         - ./php-worker/supervisord.d/7.1:/etc/supervisord.d
+      command: ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
 #      ports:
@@ -466,6 +468,7 @@ services:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
         - docker-in-docker:/certs/client
         - ./php-worker/supervisord.d/7.3:/etc/supervisord.d
+      command: ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
 #      ports:
