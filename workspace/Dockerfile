@@ -198,6 +198,8 @@ COPY ./crontab/${LARADOCK_PHP_VERSION} /etc/cron.d
 
 RUN chmod -R 644 /etc/cron.d
 
+RUN crontab /etc/cron.d/laradock
+
 ###########################################################################
 # Drush:
 ###########################################################################
