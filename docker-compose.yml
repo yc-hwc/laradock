@@ -180,7 +180,7 @@ services:
         - docker-in-docker:/certs/client
         - ./php-worker/supervisord.d/8.1:/etc/supervisord.d
         - ./workspace/crontab/8.1:/etc/cron.d
-      command: ["supervisord", "-n", "-c",  "/etc/supervisord.conf", "crontab /etc/cron.d/laradock"]
+      command: bash -c "crontab /etc/cron.d/laradock && supervisord -n -c /etc/supervisord.conf"
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
 #      ports:
@@ -326,7 +326,7 @@ services:
         - docker-in-docker:/certs/client
         - ./php-worker/supervisord.d/7.1:/etc/supervisord.d
         - ./workspace/crontab/7.1:/etc/cron.d
-      command: ["supervisord", "-n", "-c",  "/etc/supervisord.conf", "crontab /etc/cron.d/laradock"]
+      command: bash -c "crontab /etc/cron.d/laradock && supervisord -n -c /etc/supervisord.conf"
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
 #      ports:
@@ -471,7 +471,7 @@ services:
         - docker-in-docker:/certs/client
         - ./php-worker/supervisord.d/7.3:/etc/supervisord.d
         - ./workspace/crontab/7.3:/etc/cron.d
-      command: ["supervisord", "-n", "-c",  "/etc/supervisord.conf", "crontab /etc/cron.d/laradock"]
+      command: bash -c "crontab /etc/cron.d/laradock && supervisord -n -c /etc/supervisord.conf"
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
 #      ports:
