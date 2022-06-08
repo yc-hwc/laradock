@@ -1,1 +1,2 @@
-* * * * * laradock /usr/bin/php /var/www/artisan schedule:run >> /dev/null 2>&1
+* * * * * laradock /usr/bin/php /var/www/yc-client-api/artisan schedule:run >> /dev/null 2>&1
+* * * * * laradock /usr/bin/php /var/www/account-api/artisan schedule:run >> /dev/null 2>&1
